@@ -13,7 +13,7 @@ airodump -ng wlan_adın yayın yapan tüm wifi ağlarını anlık olarak değiş
   BSSID mac adreslerini gösterir
   PwR - yazısı hedefin ne kadar yakın olduğunu gösterir
   CH modemin hangi kanalda olduğunu gösterir
-  ENC şifreleme türünü gösterir ("WPA2 gibi."Etik kurallar içinde kendi internetinizin şifresini kırmak için bu tarz bilgilere    sahip olmamız lazım
+  ENC şifreleme türünü gösterir ("WPA2 gibi."Etik kurallar içinde kendi internetinizin şifresini kırmak için bu tarz bilgilere sahip olmamız lazım
 CH ismi 7 olsun
 modem mac adresi 94:FE:22:AF:AP:3D olsun
 wlan0=Wifi adaptörümün ismi olsun
@@ -21,3 +21,7 @@ airodump -ng --channel8 --bssid 94:FE:22:AF:AP:3D --write airodumptest wlan0mon 
   bu ağa bağlanmış cihazları ve bu cihazların ne kadar internet harcadığı,mac adreslerini vb bilgileri gösterir.
 DEAUTHENTICATION SALDIRISI:
 aireplay-ng --deauth paket,sayısı -a 94:FE:22:AF:AP:3D wlan0mon
+
+DAĞA GÜVENLİ BİR AĞ İÇİN:
+-Şifreleme türünü WPA kullanmak ,şifreyi çok uzun ve karmaşık yapmak.
+-Modem arayüzünde WLAN WPS'i PIN olarak açmak
