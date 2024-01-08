@@ -3,15 +3,15 @@ KALİ LİNUX NAVİGASYON KOMUTLARI:
 yenimetinbelgesi.txt=birtane  metin belgesi olsun
 Documents=dosya ismi olsun
 
-setxkbmap tr türkçe karaktere çevirir klavyeni
+setxkbmap tr klavyeni türkçe karaktere çevirir 
 
-pwd içinde bulunduğun durumu göster
+pwd içinde bulunduğun konumunu göster
 
-cd .. bir üst klasöre çık
+cd ..  bir üst klasöre çık
 
-cd Documents Documents'e gir
+cd Documents  Documents'e gir
 
-ls Documents içindeki dosyaları vs göster
+ls Documents  dosyanın içindeki bilgileri göster(metin belgesi,klasör)
 
 ls -la gizli dosya varsa gösterir alt alta dosya düzen bilgisi hakkında bilgi verir
 
@@ -34,18 +34,7 @@ lsattr /etc/resolv.conf
 chattr +a /etc/resolv.conf
 
 lsattr /etc/resolv.conf
-----------i-----------e  (/etc/resolv.conf buradaki i [buradaki i değiştirilemez demektir]  değiştirebilmek için bir sonraki kod işine yarayacak)
-achattr -i /etc/resolv.conf  yazarsan i yi siler eğer burası çalışmaz ise ilk önce chattr +a /etc/resolv.conf yazıp tekrar -i yazacağız
-
-AĞLAR:
-macchanger --random  mac adresini 16lık sistem içinde rastgele değiştirir. (randomdan sonra bağlandığın wifi bilgisini girmelisin eth0 ya da wlan0[adaptörün varsa bu tarz bir isme sahiptir])
-
-iwconfig wiriless bilgilerini daha detaylı  gösterir
+----------i-----------e  (/etc/resolv.conf buradaki i [buradaki i değiştirilemez demektir]  değiştirebilmek için bir sonraki kod işinize yarayacak)
+achattr -i /etc/resolv.conf  yazarsan i yi siler eğer burası çalışmaz ise ilk önce chattr +a /etc/resolv.conf yazıp tekrar -i yazmak zorundasınız.
 
 
-airmon-ng start wlan_adın monitör moda geçmek için ilk adım
-airmon-ng check kill 
-iwconfig ile kontrol edelim eğer monitör modda ise Mode:Monitor yazar
-çalışmaz ise:
-ifconfig wlan_adın up açar
-ifconfig wlan_adın down kapatır
