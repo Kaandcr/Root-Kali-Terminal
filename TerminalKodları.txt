@@ -1,4 +1,4 @@
-    şifre=3306
+
 KALİ LİNUX NAVİGASYON KOMUTLARI:
 yenimetinbelgesi.txt=birtane  metin belgesi olsun
 Documents=dosya ismi olsun
