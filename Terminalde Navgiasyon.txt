@@ -25,6 +25,8 @@ ifonfig ip adresi mac adresi gibi bilgileri terminalde gösterir
 
 passwd parolayı değiştirir(ilk başta parolanı sorar girersin sonra değiştirirsin)
 
+                dns adresimizi googledan bulduğumuz herhangi bir dns adresiyle değiştirmek için:
+
 cat /etc/resolv.conf macadresinin içeriğini gösterir eğer değiştirmek istersen bir sonraki kod dizimine bakın.
 
 chattr root olarak içeriği değiştirilemeyen bilgileri değiştirir.(dns,mac)
@@ -36,5 +38,5 @@ chattr +a /etc/resolv.conf
 lsattr /etc/resolv.conf
 ----------i-----------e  (/etc/resolv.conf buradaki i [buradaki i değiştirilemez demektir]  değiştirebilmek için bir sonraki kod işinize yarayacak)
 achattr -i /etc/resolv.conf  yazarsan i yi siler eğer burası çalışmaz ise ilk önce chattr +a /etc/resolv.conf yazıp tekrar -i yazmak zorundasınız.
-
+buradan sonra mac adresimizi dosyaya kaydedip (ctrl+ o + enter ardından ctrl+x) çıkabiliriz artık dnsmiz değişti.
 
